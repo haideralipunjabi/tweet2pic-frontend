@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import styles from "./navbar.module.scss";
 import Image from "next/image";
 import LogoSvg from "../public/logo-2.svg"
+import DownloadModal from "./downloadmodel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modalOpened, setModalOpened] = useState(false);
   const router = useRouter();
+  
   return (
+    <>
     <nav
       className={"navbar"}
       role="navigation"
@@ -38,20 +44,39 @@ export default function Navbar() {
         className={`navbar-menu ${menuOpen ? "is-active" : ""}`}
       >
         <div className={"navbar-end"}>
+        <div className="navbar-item">
+            <a className="button" href="mailto:developer@hackesta.org">
+            <span className="icon"><FontAwesomeIcon icon={["fas","envelope"]}/></span>
+              <span>Contact</span>
+            </a>
+          </div>
+        <div className="navbar-item">
+            <button
+              onClick={()=>{
+                setModalOpened(true)
+              }}
+              className={`button`}
+            >
+              <span className="icon"><FontAwesomeIcon icon={["fas","arrow-circle-down"]}/></span>
+              <span>Download</span>
+            </button>
+          </div>
           <div className="navbar-item">
-          
           <Link href="/about">
             <a
               className={`button ${
                 router.pathname === "/about" ? styles.active : ""
               }`}
             >
-              About
+              <span className="icon"><FontAwesomeIcon icon={["fas","info-circle"]}/></span>
+              <span>About</span>
             </a>
           </Link>
           </div>
         </div>
       </div>
     </nav>
+    <DownloadModal modalOpened={modalOpened} setModalOpened={setModalOpened}></DownloadModal>
+    </>
   );
 }

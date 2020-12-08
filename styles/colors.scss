@@ -5,7 +5,7 @@ $fg1: #fffffe;
 $primary: #1da1f2;
 $fg2: #000000;
 $secondary: #2cb67d;
-
+$transparent: #00000000;
 
 $background: $bg1;
 $link: $primary;
@@ -14,6 +14,7 @@ $text: $fg1;
 $text-strong: $fg1;
 $input-color: $bg1;
 $card-background-color: $bg1;
+$modal-card-body-background-color: $bg2;
 $navbar-background-color: $bg1;
 $tag-background-color: $bg2;
 $navbar-item-hover-background-color: $primary;
@@ -22,12 +23,12 @@ $button-background-color: $primary;
 $button-color: $fg2;
 $button-text-color: $fg2;
 
-$button-border-color: $bg1;
+$button-border-color: $transparent;
 $button-hover-color: $fg1;
 $button-focus-color: $fg1;
-$button-focus-border-color: $secondary;
+$button-focus-border-color: $transparent;
 $button-active-color: $fg1;
-$button-active-border-color: $secondary;
+$button-active-border-color: $transparent;
 $footer-background-color: $bg1;
 $footer-color: $fg1;
 $footer-padding: 2rem 1.5rem;

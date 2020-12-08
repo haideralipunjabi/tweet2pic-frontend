@@ -2,7 +2,13 @@ import '../styles/globals.scss'
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
 import Head  from "next/head";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 function MyApp({ Component, pageProps }) {
+  library.add(fab, fas);
+
   return (
     <>
     <Head>
