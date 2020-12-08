@@ -15,9 +15,6 @@ export default function Interface(){
     const [error,setError] = useState("");
     const [canShare,setCanShare] = useState(false);
     const windowSize = useWindowSize();
-    useEffect(()=>{
-            
-    })
     const options = {
         "hide_media": "Hide Media",
         "hide_thread": "Hide Parent",
@@ -50,7 +47,7 @@ export default function Interface(){
             if(data instanceof Blob){
                 let image = data
                 let f = new File([image], img.name+".png", { type: image.type });
-                setCanShare(navigator.canShare({files: [f]}))
+                setCanShare(navigator.canShare && navigator.canShare({files: [f]}))
                 img["blob"] = image;
                 let reader = new FileReader();
                 reader.addEventListener("load",(e)=>{
