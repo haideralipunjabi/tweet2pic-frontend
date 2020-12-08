@@ -1,11 +1,11 @@
 {
-    "start_url": "/",
     "short_name": "Tweet2Pic",
-    "url": "https://tweet2pic.vercel.app",
+    "url": "https://tweet2pic.js.org",
     "description": "Convert Tweets to Images",
     "background_color": "#16161a",
     "display": "standalone",
     "scope": "/",
+    "start_url": "/?utm_source=pwa",
     "theme_color": "#1da1f2",
     "name": "Tweet2Pic",
     "icons": [

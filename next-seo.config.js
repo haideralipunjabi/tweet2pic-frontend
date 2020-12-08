@@ -1,7 +1,7 @@
 let config = {
     title:"Tweet2Pic",
     description:"Convert Tweets to Images",
-    url:"https://tweet2pic.vercel.app",
+    url:"https://tweet2pic.js.org",
 }
 export default {
     title:config.title,
