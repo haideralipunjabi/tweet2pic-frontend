@@ -8,7 +8,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <script dangerouslySetInnerHTML={{
-            __html=`
+            __html:`
             <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRVSTDNJYK"></script>
 <script>
