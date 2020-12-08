@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import IconButton from "../components/iconButton";
 export default function Home() {
   return (
     <div
@@ -19,14 +20,62 @@ export default function Home() {
             >
               NextJS
             </a>{" "}
-            and hosted on <a
+            and hosted on{" "}
+            <a
               href="https://vercel.com"
               target="_blank"
               rel="noopener noreferrer"
-            >Vercel</a>. It communicates to a Python backend hosted on <a href="https://heroku.com" target="_blank" rel="noopener noreferrer">Heroku</a>.
+            >
+              Vercel
+            </a>
+            . It communicates to a Python backend hosted on{" "}
+            <a
+              href="https://heroku.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Heroku
+            </a>
+            .
           </p>
-          <p className="has-text-justified">
-          </p>
+          <br />
+          <IconButton
+            icon={["fab", "github"]}
+            href="https://github.com/haideralipunjabi/tweet2pic-frontend"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View code on Github
+          </IconButton>
+
+          <h4 className="is-size-4 my-4">
+            Developed by:{" "}
+            <a
+              href="https://haideralipunjabi.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Haider Ali Punjabi
+            </a>
+          </h4>
+          <div className="buttons">
+            <IconButton
+              icon={["fab", "twitter"]}
+              href="https://twitter.com/HAliPunjabi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow me on Twitter
+            </IconButton>
+            <IconButton
+              icon={["fab", "github"]}
+              href="https://github.com/haideralipunjabi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View my Github
+            </IconButton>
+          </div>
         </div>
       </section>
       <Footer></Footer>

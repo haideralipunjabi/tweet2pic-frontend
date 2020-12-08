@@ -1,7 +1,7 @@
-import '../styles/globals.scss'
-import { DefaultSeo } from 'next-seo';
-import SEO from '../next-seo.config';
-import Head  from "next/head";
+import "../styles/globals.scss";
+import { DefaultSeo } from "next-seo";
+import SEO from "../next-seo.config";
+import Head from "next/head";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-    <Head>
+      <Head>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -43,10 +43,10 @@ function MyApp({ Component, pageProps }) {
         ></meta>
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-    <DefaultSeo {...SEO} />
-    <Component {...pageProps} />
+      <DefaultSeo {...SEO} />
+      <Component {...pageProps} />
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

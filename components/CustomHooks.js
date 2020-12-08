@@ -1,5 +1,5 @@
-import { useState,useEffect } from "react";
-export function useInterface(callback,initInputs={}) {
+import { useState, useEffect } from "react";
+export function useInterface(callback, initInputs = {}) {
   const [inputs, setInputs] = useState(initInputs);
   const handleSubmit = (event) => {
     if (event) {
@@ -9,8 +9,8 @@ export function useInterface(callback,initInputs={}) {
   };
   const handleInputChange = (event) => {
     event.persist();
-    if(event.target.type=="checkbox"){
-      event.target.value=event.target.checked
+    if (event.target.type == "checkbox") {
+      event.target.value = event.target.checked;
     }
     setInputs((inputs) => ({
       ...inputs,
@@ -41,13 +41,13 @@ export function useWindowSize() {
         height: window.innerHeight,
       });
     }
-    
+
     // Add event listener
     window.addEventListener("resize", handleResize);
-    
+
     // Call handler right away so state gets updated with initial window size
     handleResize();
-    
+
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount

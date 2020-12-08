@@ -1,10 +1,13 @@
-import Head from 'next/head'
-import Navbar from "../components/navbar"
-import Interface from "../components/interface"
-import Footer from "../components/footer"
+import Head from "next/head";
+import Navbar from "../components/navbar";
+import Interface from "../components/interface";
+import Footer from "../components/footer";
 export default function Home() {
   return (
-    <div className="is-flex is-flex-direction-column is-justify-content-space-between" style={{height:"100%"}}>
+    <div
+      className="is-flex is-flex-direction-column is-justify-content-space-between"
+      style={{ height: "100%" }}
+    >
       <Navbar></Navbar>
       <section className="section">
         <div className="container">
@@ -13,5 +16,5 @@ export default function Home() {
       </section>
       <Footer></Footer>
     </div>
-  )
+  );
 }
