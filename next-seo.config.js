@@ -14,5 +14,13 @@ export default {
       type: 'website',
       url: config.url,
       site_name: config.title,
+      images: [
+        {
+          url: '/og.png',
+          width: 3750,
+          height: 1969,
+          alt: 'OG Image'
+      },
+      ]
     },
   };
