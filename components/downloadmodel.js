@@ -7,7 +7,7 @@ export default function DownloadModel(props) {
   const [isApple, setIsApple] = useState(false);
   const [isAppleShown,setIsAppleShown] = useState(false);
   useEffect(() => {
-    if(['iPhone', 'iPad', 'iPod'].includes(navigator.platform)){
+    if(['iPhone', 'iPad', 'iPod'].includes(navigator.platform) && !navigator.standalone){
       setIsApple(true);
     }
     const handlePrompt = (e) => {
@@ -70,7 +70,7 @@ export default function DownloadModel(props) {
               }}
             >
               <span className="icon">
-                <FontAwesomeIcon icon={["fas", "globe-asia"]} />
+                <FontAwesomeIcon icon={["fab", "apple"]} />
               </span>
               <span>What about iOS?</span>
             </button>
