@@ -7,17 +7,15 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRVSTDNJYK"></script>
           <script dangerouslySetInnerHTML={{
             __html:`
             <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRVSTDNJYK"></script>
-<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-YRVSTDNJYK');
-</script>
 `
           }}/>
         </Head>
