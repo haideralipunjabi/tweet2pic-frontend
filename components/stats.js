@@ -14,9 +14,9 @@ export default function Stats() {
       .then((data) => { 
         setStats(data);
       }).catch(()=>{
-          
+
       });
-  });
+  },[]);
   return (
     <h5
       style={{
