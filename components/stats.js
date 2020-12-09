@@ -18,7 +18,7 @@ export default function Stats() {
       });
   },[]);
   return (
-    <h5
+    <h4
       style={{
         opacity: 0,
         left: 0,
@@ -28,6 +28,6 @@ export default function Stats() {
       className={`is-size-5 has-text-centered my-6 ${Object.keys(stats).length !== 0 ? "fadeIn":""}`}
     >
       We have converted <span className="has-text-primary">{stats.value}</span> tweets to images
-    </h5>
+    </h4>
   );
 }
