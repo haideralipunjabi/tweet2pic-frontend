@@ -5,6 +5,7 @@ import styles from "./interface.module.scss";
 import PuffLoader from "react-spinners/PuffLoader";
 import Checkbox from "./interface/checkbox";
 import download from "downloadjs";
+import Stats from "./stats";
 export default function Interface() {
   const API = "https://tweet2pic.herokuapp.com/tweet";
   // const API = "http://localhost:5000/tweet"
@@ -140,6 +141,7 @@ export default function Interface() {
         >
           {error}
         </h4>
+        <Stats />
       </form>
       <PuffLoader
         color={"#1da1f2"}
