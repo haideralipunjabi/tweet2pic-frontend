@@ -7,9 +7,14 @@ export default function Stats() {
 
   useEffect(() => {
     fetch(API)
-      .then((r) => r.json())
-      .then((data) => {
+      .then((r) => {
+          if(r.status === 200) return r.json()
+          throw Error("An Error Occured. Try Again Later");
+        })
+      .then((data) => { 
         setStats(data);
+      }).catch(()=>{
+          
       });
   });
   return (
