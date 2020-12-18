@@ -5,22 +5,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-YRVSTDNJYK"
-          ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YRVSTDNJYK');
-`,
-            }}
-          />
+        <script data-goatcounter="https://tweet2pic.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
         </Head>
         <body>
           <Main />
