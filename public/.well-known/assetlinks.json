@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.hackesta.tweet2pic",
+      "sha256_cert_fingerprints": [
+        "2F:92:30:5B:49:D9:EE:69:96:ED:C1:EF:0C:94:30:55:53:71:F3:53:B7:9D:73:A5:28:35:C6:C1:D9:15:8D:22"
+      ]
+    }
+  }]
