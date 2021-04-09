@@ -6,9 +6,13 @@ import PuffLoader from "react-spinners/PuffLoader";
 import Checkbox from "./interface/checkbox";
 import download from "downloadjs";
 import Stats from "./stats";
+import { useRouter } from "next/router";
+
 export default function Interface() {
   const API = "https://tweet2pic.herokuapp.com/tweet";
   // const API = "http://localhost:5000/tweet"
+  const router = useRouter();
+  const { share_tweet } = router.query;
 
   const [tweetLoaded, setTweetLoaded] = useState(false);
   const [tweetLoading, setTweetLoading] = useState(false);
@@ -68,7 +72,7 @@ export default function Interface() {
         setTweetLoading(false);
       });
   }
-  const { inputs, handleInputChange, handleSubmit } = useInterface(getImage, {
+  const { inputs, setInput, handleInputChange, handleSubmit } = useInterface(getImage, {
     url: "",
     hide_media: false,
     hide_thread: false,
@@ -79,6 +83,13 @@ export default function Interface() {
   });
   const formRef = useRef();
   const urlRef = useRef();
+
+  useEffect(()=>{
+    if(share_tweet) {
+      urlRef.current.value = share_tweet
+      setInput("url",share_tweet);
+    };
+  }, [share_tweet]);
   const validate = () => {
     return formRef.current.reportValidity();
   };
