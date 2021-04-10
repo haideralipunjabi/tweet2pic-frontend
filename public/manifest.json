@@ -28,5 +28,33 @@
         "text":"share_tweet",
         "url":"url"
       }
-    }
+    },
+    "orientation": "any",
+    "screenshots" : [
+      {
+        "src": "/screenshots/screenshot1.png",
+        "sizes": "2160x3840",
+        "type": "image/png"
+      },
+      {
+        "src": "/screenshots/screenshot2.png",
+        "sizes": "2160x3840",
+        "type": "image/png"
+      },
+      {
+        "src": "/screenshots/screenshot3.png",
+        "sizes": "2160x3840",
+        "type": "image/png"
+      }
+    ],
+    "categories": ["social","tools","utilities"],
+    "shortcuts": [
+      {
+        "name": "Open Tweet2Pic",
+        "shortname": "Tweet2Pic",
+        "description": "Opens the App",
+        "url": "/?utm_source=pwa_shortcut",
+        "icons": [{"src":"/favicons/android-chrome-192x192.png", "sizes":"192x192"}]
+      }
+    ]
   }
