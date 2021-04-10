@@ -12,4 +12,9 @@ module.exports = withPlugins([
       },
     },
   ],
+  {
+    images: {
+      domains: ['pbs.twimg.com']
+    }
+  }
 ]);
