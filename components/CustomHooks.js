@@ -17,17 +17,10 @@ export function useInterface(callback, initInputs = {}) {
       [event.target.name]: event.target.value,
     }));
   };
-  const setInput = (key,value) => {
-    setInputs((inputs) => ({
-      ...inputs,
-      [key]: value,
-    }));
-  }
   return {
     handleSubmit,
     handleInputChange,
     inputs,
-    setInput,
   };
 }
 

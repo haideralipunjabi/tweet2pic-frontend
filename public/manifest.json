@@ -20,13 +20,5 @@
         "sizes": "512x512",
         "type": "image/png"
       }
-    ],
-    "share_target": {
-      "action": "/",
-      "params": {
-        "title":"share_tweet",
-        "text":"share_tweet",
-        "url":"url"
-      }
-    }
+    ]
   }

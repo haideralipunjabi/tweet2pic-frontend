@@ -2,7 +2,6 @@ import Head from "next/head";
 import Navbar from "../components/navbar";
 import Interface from "../components/interface";
 import Footer from "../components/footer";
-
 export default function Home() {
   return (
     <div
