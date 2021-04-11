@@ -19,7 +19,10 @@ export default function Navbar() {
           >
             Haider Ali Punjabi
           </a>{" "}
-          | © {new Date().getFullYear()} <strong>Tweet2Pic</strong>
+          | <a href="https://www.buymeacoffee.com/HAliPunjabi" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon
+            className="mx-2"
+            icon={["fas","mug-hot"]}/>Buy Me a Coffee
+          </a> | © {new Date().getFullYear()} <strong>Tweet2Pic</strong>
         </p>
       </div>
     </footer>
