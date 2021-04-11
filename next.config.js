@@ -13,8 +13,8 @@ module.exports = withPlugins([
     },
   ],
   {
-    images: {
-      domains: ['pbs.twimg.com']
+    future: {
+      webpack5:true
     }
   }
 ]);
