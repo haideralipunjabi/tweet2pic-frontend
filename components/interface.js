@@ -29,10 +29,11 @@ export default function Interface() {
     hide_footer: "Hide Footer",
   };
   function getImage() {
-    inputs.theme = inputs.theme == "true" ? "dark" : "light";
+    let params = {...inputs};
+    params.theme = params.theme ==true ? "dark" : "light";
     let url = API + "?";
-    for (let key of Object.keys(inputs)) {
-      url += `${key}=${inputs[key]}&`;
+    for (let key of Object.keys(params)) {
+      url += `${key}=${params[key]}&`;
     }
     let img = {};
     fetch(url)
@@ -79,7 +80,7 @@ export default function Interface() {
     square: false,
     hide_timestamp: false,
     hide_footer: false,
-    theme: "light",
+    theme: false,
   });
   const formRef = useRef();
   const urlRef = useRef();
@@ -125,6 +126,7 @@ export default function Interface() {
               key={v}
               name={k[0]}
               label={k[1]}
+              checked={inputs[k[0]]}
               onChange={handleInputChange}
             />
           ))}

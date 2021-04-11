@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 export function useInterface(callback, initInputs = {}) {
+
   const [inputs, setInputs] = useState(initInputs);
   const handleSubmit = (event) => {
     if (event) {
@@ -9,12 +10,14 @@ export function useInterface(callback, initInputs = {}) {
   };
   const handleInputChange = (event) => {
     event.persist();
+    let key = event.target.name
+    let value = event.target.value
     if (event.target.type == "checkbox") {
-      event.target.value = event.target.checked;
+      value = event.target.checked;
     }
     setInputs((inputs) => ({
       ...inputs,
-      [event.target.name]: event.target.value,
+      [key]: value,
     }));
   };
   const setInput = (key,value) => {
@@ -23,6 +26,26 @@ export function useInterface(callback, initInputs = {}) {
       [key]: value,
     }));
   }
+  useEffect(() => {
+    setInputs(
+      Object.fromEntries(
+        Object.entries(initInputs).map(entry=>{
+          let fromLS = window.localStorage.getItem("settings-"+entry[0])
+          if(entry[0]==="url" || fromLS===null) return entry
+          fromLS = (fromLS==="true")
+          return [
+            entry[0],fromLS
+          ]
+        })
+      )
+    )
+  }, [])
+  useEffect(() => {
+    Object.entries(inputs).forEach(entry=>{
+      if(entry[0]==="url") return
+      window.localStorage.setItem("settings-"+entry[0],entry[1])
+    })
+  }, [inputs])
   return {
     handleSubmit,
     handleInputChange,
